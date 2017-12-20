@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'InfiniteLayout_Example' do
+  pod 'InfiniteLayout', :path => '../'
+
+  target 'InfiniteLayout_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
