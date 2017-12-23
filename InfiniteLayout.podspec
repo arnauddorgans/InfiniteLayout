@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Vertical and Horizontal infinite scrolling for UICollectionView'
 
 # This description is used to generate tags and improve search results.
