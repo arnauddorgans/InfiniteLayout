@@ -30,8 +30,11 @@ InfiniteCollectionView don't need any other delegate or dataSource,
 just use UICollectionViewDataSource and UICollectionViewDelegate as you'll use it in any other UICollectionView.
 
 InfiniteLayout provide 3 class for infinite scrolling:
+
 **InfiniteLayout**: an UICollectionViewFlowLayout
+
 **InfiniteCollectionView**: an UICollectionView with InfiniteLayout
+
 **InfiniteCollectionViewController**: an UICollectionViewController with InfiniteCollectionView
 
 
