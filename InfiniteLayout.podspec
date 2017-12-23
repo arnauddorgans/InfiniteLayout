@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of InfiniteLayout.'
+  s.summary          = 'Beautiful CollectionView Layout providing InfiniteSrolling, Paging and NSProxy delegate'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,11 +26,13 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Arnoymous' => 'ineox@me.com' }
   s.source           = { :git => 'https://github.com/Arnoymous/InfiniteLayout.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/arnauddorgans'
 
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source_files = 'InfiniteLayout/Classes/**/*'
+#s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/InfiniteLayout/BridgeHeader.h' } 
   
   # s.resource_bundles = {
   #   'InfiniteLayout' => ['InfiniteLayout/Assets/*.png']

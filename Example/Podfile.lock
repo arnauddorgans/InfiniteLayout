@@ -1,0 +1,16 @@
+PODS:
+  - InfiniteLayout (0.1.0)
+
+DEPENDENCIES:
+  - InfiniteLayout (from `../`)
+
+EXTERNAL SOURCES:
+  InfiniteLayout:
+    :path: ../
+
+SPEC CHECKSUMS:
+  InfiniteLayout: 82a21b8255623e2d72174f3082bef9e576140621
+
+PODFILE CHECKSUM: 3a658536624f41ec07c5a7a2c55407b9b8f48528
+
+COCOAPODS: 1.4.0.beta.2

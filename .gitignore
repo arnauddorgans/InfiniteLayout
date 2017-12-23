@@ -31,3 +31,5 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+/Example/InfiniteLayout.xcworkspace
+/Example/Pods
