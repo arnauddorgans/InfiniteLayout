@@ -26,10 +26,10 @@ pod 'InfiniteLayout'
 @IBOutlet weak var collectionView: InfiniteCollectionView!
 ```
 
-InfiniteCollectionView don't need any other delegate or dataSource,
-just use UICollectionViewDataSource and UICollectionViewDelegate as you'll use it in any other UICollectionView.
+InfiniteCollectionView doesn't need any other delegate or dataSource,
+just use UICollectionViewDataSource and UICollectionViewDelegate in the same way as you'll use it in any other UICollectionView.
 
-InfiniteLayout provide 3 class for infinite scrolling:
+InfiniteLayout provides 3 classes for infinite scrolling:
 
 **InfiniteLayout**: an UICollectionViewFlowLayout
 
@@ -37,6 +37,27 @@ InfiniteLayout provide 3 class for infinite scrolling:
 
 **InfiniteCollectionViewController**: an UICollectionViewController with InfiniteCollectionView
 
+### IndexPath
+
+InfiniteCollectionView may create fake indexPath,
+
+To get the real indexPath call 
+
+```swift
+func indexPath(from infiniteIndexPath: IndexPath) -> IndexPath
+```
+
+To get the real section call 
+
+```swift
+func section(from infiniteSection: Int) -> Int
+```
+
+### Paging
+
+InfiniteCollectionView provide a paging functionality, you can enable it by setting the **isItemPagingEnabled** flag to **true**,
+
+When the **isItemPagingEnabled** flag is enabled you can adjust the deceleration rate by setting the **velocityMultiplier**, the more the value is high, the more the deceleration is long
 
 ## Author
 
