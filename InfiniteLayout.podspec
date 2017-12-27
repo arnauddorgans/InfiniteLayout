@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Horizontal and Vertical infinite scrolling feature for UICollectionView'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'CocoaProxy', '~> 0.1'
 end

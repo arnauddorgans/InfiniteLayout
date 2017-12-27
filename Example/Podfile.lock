@@ -1,5 +1,7 @@
 PODS:
-  - InfiniteLayout (0.1.0)
+  - CocoaProxy (0.1.1)
+  - InfiniteLayout (0.1.3):
+    - CocoaProxy (~> 0.1)
 
 DEPENDENCIES:
   - InfiniteLayout (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  InfiniteLayout: 82a21b8255623e2d72174f3082bef9e576140621
+  CocoaProxy: 35ab81e24325b33834cffe45a3d1fd48ca67ef3a
+  InfiniteLayout: 0ab39bf2a4d9ce5c473ebccfc0d3b7278de18ac9
 
 PODFILE CHECKSUM: 3a658536624f41ec07c5a7a2c55407b9b8f48528
 

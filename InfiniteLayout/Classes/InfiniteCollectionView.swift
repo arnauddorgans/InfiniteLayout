@@ -9,10 +9,8 @@ import UIKit
 
 open class InfiniteCollectionView: UICollectionView {
     
-    lazy var delegateProxy = InfiniteCollectionViewDelegateProxy(self, exceptions: ["scrollViewDidScroll:",
-                                                                                    "scrollViewWillEndDragging:withVelocity:targetContentOffset:"])
-    lazy var dataSourceProxy = InfiniteCollectionViewDataSourceProxy(self, exceptions: ["numberOfSectionsInCollectionView:",
-                                                                                        "collectionView:numberOfItemsInSection:"])
+    lazy var delegateProxy = InfiniteCollectionViewDelegateProxy(collectionView: self)
+    lazy var dataSourceProxy = InfiniteCollectionViewDataSourceProxy(collectionView: self)
     
     @IBInspectable var isItemPagingEnabled: Bool = false
     @IBInspectable var velocityMultiplier: CGFloat = 500 {

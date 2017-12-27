@@ -291,10 +291,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaProxy/CocoaProxy.framework",
 				"${BUILT_PRODUCTS_DIR}/InfiniteLayout/InfiniteLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaProxy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InfiniteLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
