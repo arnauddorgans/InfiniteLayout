@@ -7,10 +7,19 @@
 
 import UIKit
 
+@objc public protocol InfiniteCollectionViewDelegate {
+    
+    @objc optional func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath centeredIndexPath: IndexPath?)
+}
+
 open class InfiniteCollectionView: UICollectionView {
     
     lazy var delegateProxy = InfiniteCollectionViewDelegateProxy(collectionView: self)
     lazy var dataSourceProxy = InfiniteCollectionViewDataSourceProxy(collectionView: self)
+    
+    @IBOutlet open var infiniteDelegate: InfiniteCollectionViewDelegate?
+    
+    open var centeredIndexPath: IndexPath?
     
     @IBInspectable var isItemPagingEnabled: Bool = false
     @IBInspectable var velocityMultiplier: CGFloat = 500 {
@@ -54,24 +63,24 @@ open class InfiniteCollectionView: UICollectionView {
         return self.collectionViewLayout as? InfiniteLayout
     }
     
+    private static func infiniteLayout(layout: UICollectionViewLayout) -> InfiniteLayout {
+        guard let infiniteLayout = layout as? InfiniteLayout else {
+            return InfiniteLayout(layout: layout)
+        }
+        return infiniteLayout
+    }
+    
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(frame: frame, collectionViewLayout: InfiniteLayout(layout: layout))
-        sharedInit()
+        super.init(frame: frame, collectionViewLayout: InfiniteCollectionView.infiniteLayout(layout: layout))
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let layout = self.collectionViewLayout
-        if !(layout is InfiniteLayout) {
-            self.collectionViewLayout = InfiniteLayout(layout: layout)
+        let infiniteLayout = InfiniteCollectionView.infiniteLayout(layout: self.collectionViewLayout)
+        if self.collectionViewLayout != infiniteLayout {
+            self.collectionViewLayout = infiniteLayout
         }
-        sharedInit()
-    }
-    
-    private func sharedInit() {
-        delegateProxy.collectionView = self
-        dataSourceProxy.collectionView = self
     }
     
     open override func layoutSubviews() {
@@ -92,6 +101,12 @@ extension InfiniteCollectionView: UICollectionViewDelegate {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegateProxy.delegate?.scrollViewDidScroll?(scrollView)
         self.loopCollectionViewIfNeeded()
+        
+        let preferredVisibleIndexPath = infiniteLayout.preferredVisibleLayoutAttributes()?.indexPath
+        if self.centeredIndexPath != preferredVisibleIndexPath {
+            self.centeredIndexPath = preferredVisibleIndexPath
+            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: preferredVisibleIndexPath)
+        }
     }
     
     // MARK: Paging

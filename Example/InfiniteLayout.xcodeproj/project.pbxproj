@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		5259B95F4E58F763F6C70333 /* Pods_InfiniteLayout_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6830D8B970E919B725A0D5E /* Pods_InfiniteLayout_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* CustomViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		D403973F1FEBFA9D006C41D2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403973E1FEBFA9D006C41D2 /* Cell.swift */; };
+		D4162A391FF502A900AC2572 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4162A381FF502A900AC2572 /* CustomLayout.swift */; };
+		D43362D11FF64B330040C679 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43362CF1FF64B330040C679 /* BaseCollectionViewController.swift */; };
+		D4B9816E1FFCCC900016C676 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9816D1FFCCC900016C676 /* PickerController.swift */; };
 		E997A539C8278E7A661C9F91 /* Pods_InfiniteLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50F79B0DFFDE95D322480B2 /* Pods_InfiniteLayout_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +38,7 @@
 		607FACD01AFB9204008FA782 /* InfiniteLayout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		AD3D900D0067605DEAFF148B /* Pods-InfiniteLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteLayout_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C50F79B0DFFDE95D322480B2 /* Pods_InfiniteLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfiniteLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D403973E1FEBFA9D006C41D2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		D4162A381FF502A900AC2572 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		D43362CF1FF64B330040C679 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		D4B9816D1FFCCC900016C676 /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
 		EF577FD009F0E2F96F1CECC6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F900DDE615FA1056EB58998B /* Pods-InfiniteLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteLayout_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteLayout_Tests/Pods-InfiniteLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD6AC573B93C313B5BDFF3FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -96,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				D403973E1FEBFA9D006C41D2 /* Cell.swift */,
+				D43362D31FF64B9E0040C679 /* Base */,
+				D43362CC1FF64AD30040C679 /* Custom */,
+				D4B9816C1FFCCC5B0016C676 /* Picker */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -149,6 +156,32 @@
 				C50F79B0DFFDE95D322480B2 /* Pods_InfiniteLayout_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D43362CC1FF64AD30040C679 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* CustomViewController.swift */,
+				D4162A381FF502A900AC2572 /* CustomLayout.swift */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		D43362D31FF64B9E0040C679 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D403973E1FEBFA9D006C41D2 /* Cell.swift */,
+				D43362CF1FF64B330040C679 /* BaseCollectionViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		D4B9816C1FFCCC5B0016C676 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9816D1FFCCC900016C676 /* PickerController.swift */,
+			);
+			name = Picker;
 			sourceTree = "<group>";
 		};
 		E938139B99B9D91C14707C07 /* Pods */ = {
@@ -377,9 +410,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				D4162A391FF502A900AC2572 /* CustomLayout.swift in Sources */,
+				D4B9816E1FFCCC900016C676 /* PickerController.swift in Sources */,
 				D403973F1FEBFA9D006C41D2 /* Cell.swift in Sources */,
+				D43362D11FF64B330040C679 /* BaseCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yGQ-hH-2v6">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,68 +16,387 @@
             <objects>
                 <navigationController id="yGQ-hH-2v6" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IdE-R7-9TG">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="sSL-wr-E9v" kind="relationship" relationship="rootViewController" id="6hU-n3-d5H"/>
+                        <segue destination="pMz-7t-sA5" kind="relationship" relationship="rootViewController" id="AAf-BN-dLc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uD-Xz-jjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-988" y="37"/>
+            <point key="canvasLocation" x="-1644" y="61"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Tsa-GF-Rqw">
+        <!--InfiniteLayout-->
+        <scene sceneID="fMt-PB-wyT">
             <objects>
-                <collectionViewController id="sSL-wr-E9v" customClass="ViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BuB-JB-b15" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <tableViewController id="pMz-7t-sA5" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YNN-Jo-hL3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tcc-xt-sXE">
-                            <size key="itemSize" width="150" height="100"/>
+                        <sections>
+                            <tableViewSection id="wLh-Qy-wV4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="VSq-Pr-6ay" style="IBUITableViewCellStyleDefault" id="Ave-Hr-Gmz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ave-Hr-Gmz" id="Fri-pG-UG3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Horizontal Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VSq-Pr-6ay">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CU7-Hg-6kG" kind="show" id="yzb-gl-6Xz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Efh-hp-Yw4" style="IBUITableViewCellStyleDefault" id="e4W-KK-bkI">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e4W-KK-bkI" id="WDz-rM-Z2L">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Vertical Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Efh-hp-Yw4">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9P2-Ud-D2M" kind="show" id="H8w-EO-laS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="9We-VT-VYi" style="IBUITableViewCellStyleDefault" id="5Ku-tY-Gtv">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ku-tY-Gtv" id="M7f-Mo-aWc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Custom Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9We-VT-VYi">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ctO-Ld-yhL" kind="show" id="qss-AL-dgi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="c9c-gc-NDL" style="IBUITableViewCellStyleDefault" id="7Dq-og-5lN">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Dq-og-5lN" id="XGb-gg-zbn">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c9c-gc-NDL">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nUW-3u-2O9" kind="show" id="SPm-WC-Yf4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pMz-7t-sA5" id="OC9-mx-dmD"/>
+                            <outlet property="delegate" destination="pMz-7t-sA5" id="nwI-aQ-G7d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="InfiniteLayout" id="6dR-xO-LQz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5O-nh-h2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="61"/>
+        </scene>
+        <!--Custom Layout-->
+        <scene sceneID="Nwi-KZ-nuX">
+            <objects>
+                <viewController id="ctO-Ld-yhL" customClass="CustomViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkO-J5-FlB"/>
+                        <viewControllerLayoutGuide type="bottom" id="q9H-d0-4cm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C5p-bu-Djh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="enX-ef-ELn" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="ZR7-Jn-ewG" customClass="CustomLayout" customModule="InfiniteLayout_Example" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="w1M-Ws-9fK" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVT-2b-OS8" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="styleIndex">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gVT-2b-OS8" firstAttribute="top" secondItem="w1M-Ws-9fK" secondAttribute="top" id="9qG-Sx-gVG"/>
+                                            <constraint firstAttribute="bottom" secondItem="gVT-2b-OS8" secondAttribute="bottom" id="BOm-tM-pkP"/>
+                                            <constraint firstAttribute="trailing" secondItem="gVT-2b-OS8" secondAttribute="trailing" id="HC4-Mv-T4P"/>
+                                            <constraint firstItem="gVT-2b-OS8" firstAttribute="leading" secondItem="w1M-Ws-9fK" secondAttribute="leading" id="jH9-f5-fxA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellView" destination="gVT-2b-OS8" id="Em8-Ah-Jzb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ctO-Ld-yhL" id="bXu-Jz-K7t"/>
+                                    <outlet property="delegate" destination="ctO-Ld-yhL" id="Vz4-5J-frZ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="enX-ef-ELn" firstAttribute="top" secondItem="C5p-bu-Djh" secondAttribute="top" id="2nB-Om-PsD"/>
+                            <constraint firstAttribute="bottom" secondItem="enX-ef-ELn" secondAttribute="bottom" id="Tdv-eb-r3X"/>
+                            <constraint firstAttribute="trailing" secondItem="enX-ef-ELn" secondAttribute="trailing" id="ZM0-nc-pUD"/>
+                            <constraint firstItem="enX-ef-ELn" firstAttribute="leading" secondItem="C5p-bu-Djh" secondAttribute="leading" id="uX4-ox-gnL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Layout" id="hZl-1w-5Nq"/>
+                    <connections>
+                        <outlet property="infiniteCollectionView" destination="enX-ef-ELn" id="jKo-DT-4uH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4s9-AY-FII" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="802"/>
+        </scene>
+        <!--Infinite Delegate-->
+        <scene sceneID="HqS-9O-oG4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nUW-3u-2O9" customClass="PickerController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zFz-ZQ-lzW"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZuO-bs-QWL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vhd-CK-34X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-5Z-6FI" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
+                                <rect key="frame" x="0.0" y="288" width="320" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="PTo-iT-zZX">
+                                    <size key="itemSize" width="200" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7Np-kQ-f93" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21" width="200" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uz9-xR-d0L" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="styleIndex">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Uz9-xR-d0L" firstAttribute="top" secondItem="7Np-kQ-f93" secondAttribute="top" id="2lt-hb-Zl9"/>
+                                            <constraint firstItem="Uz9-xR-d0L" firstAttribute="leading" secondItem="7Np-kQ-f93" secondAttribute="leading" id="Hj7-OH-iis"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uz9-xR-d0L" secondAttribute="trailing" id="mr0-wj-ftP"/>
+                                            <constraint firstAttribute="bottom" secondItem="Uz9-xR-d0L" secondAttribute="bottom" id="t8H-tx-AHw"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellView" destination="Uz9-xR-d0L" id="Q84-nb-acR"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocityMultiplier">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nUW-3u-2O9" id="vHT-UO-3ny"/>
+                                    <outlet property="delegate" destination="nUW-3u-2O9" id="cXx-OK-csN"/>
+                                    <outlet property="infiniteDelegate" destination="nUW-3u-2O9" id="FQk-xA-mjb"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-eR-E9T" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                <rect key="frame" x="53.5" y="66.5" width="213" height="213"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="n2a-eR-E9T" firstAttribute="height" secondItem="Vhd-CK-34X" secondAttribute="width" multiplier="2:3" id="15l-Xa-cgF"/>
+                            <constraint firstItem="n2a-eR-E9T" firstAttribute="centerY" secondItem="Yg1-5Z-6FI" secondAttribute="top" multiplier="0.6" id="831-T2-ANf"/>
+                            <constraint firstItem="Yg1-5Z-6FI" firstAttribute="height" secondItem="Vhd-CK-34X" secondAttribute="height" multiplier="0.4" id="A7s-lr-k2k"/>
+                            <constraint firstItem="ZuO-bs-QWL" firstAttribute="top" secondItem="Yg1-5Z-6FI" secondAttribute="bottom" id="GmZ-Db-ynH"/>
+                            <constraint firstAttribute="trailing" secondItem="Yg1-5Z-6FI" secondAttribute="trailing" id="PSV-WU-ltt"/>
+                            <constraint firstItem="Yg1-5Z-6FI" firstAttribute="leading" secondItem="Vhd-CK-34X" secondAttribute="leading" id="UQ7-m3-LKy"/>
+                            <constraint firstItem="n2a-eR-E9T" firstAttribute="centerX" secondItem="Vhd-CK-34X" secondAttribute="centerX" id="hN7-qa-9iE"/>
+                            <constraint firstItem="n2a-eR-E9T" firstAttribute="width" secondItem="Vhd-CK-34X" secondAttribute="width" multiplier="2:3" id="k1E-14-EKC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Picker" id="Op4-F3-Cvs"/>
+                    <connections>
+                        <outlet property="infiniteCollectionView" destination="Yg1-5Z-6FI" id="dYW-hl-GxB"/>
+                        <outlet property="selectedView" destination="n2a-eR-E9T" id="kE8-NA-C2Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlK-LR-KNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="802"/>
+        </scene>
+        <!--Horizontal Layout-->
+        <scene sceneID="0Xz-LA-moA">
+            <objects>
+                <collectionViewController id="CU7-Hg-6kG" customClass="BaseCollectionViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Iuy-Ov-jLz" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="i7U-Tf-kfd">
+                            <size key="itemSize" width="250" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Vf0-ro-DM5" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="BVQ-cb-bj4" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="133" width="250" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWd-w1-K3N" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wM-ge-YKX" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="SWd-w1-K3N" firstAttribute="leading" secondItem="Vf0-ro-DM5" secondAttribute="leading" id="HM6-Rd-74h"/>
-                                    <constraint firstItem="SWd-w1-K3N" firstAttribute="top" secondItem="Vf0-ro-DM5" secondAttribute="top" id="jJh-U5-WWC"/>
-                                    <constraint firstAttribute="bottom" secondItem="SWd-w1-K3N" secondAttribute="bottom" id="n3V-C9-rAP"/>
-                                    <constraint firstAttribute="trailing" secondItem="SWd-w1-K3N" secondAttribute="trailing" id="oPa-mO-RJ6"/>
+                                    <constraint firstAttribute="bottom" secondItem="1wM-ge-YKX" secondAttribute="bottom" id="44V-6k-Vxi"/>
+                                    <constraint firstAttribute="trailing" secondItem="1wM-ge-YKX" secondAttribute="trailing" id="BO0-dS-ek7"/>
+                                    <constraint firstItem="1wM-ge-YKX" firstAttribute="leading" secondItem="BVQ-cb-bj4" secondAttribute="leading" id="O2r-kl-QZo"/>
+                                    <constraint firstItem="1wM-ge-YKX" firstAttribute="top" secondItem="BVQ-cb-bj4" secondAttribute="top" id="kT9-T5-w19"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="cellView" destination="SWd-w1-K3N" id="2A6-17-L1b"/>
+                                    <outlet property="cellView" destination="1wM-ge-YKX" id="BFc-xc-0VL"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="velocityMultiplier">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="dataSource" destination="sSL-wr-E9v" id="weE-ef-YRt"/>
-                            <outlet property="delegate" destination="sSL-wr-E9v" id="hva-cg-vBg"/>
+                            <outlet property="dataSource" destination="CU7-Hg-6kG" id="BOZ-dL-WLG"/>
+                            <outlet property="delegate" destination="CU7-Hg-6kG" id="NKU-4F-wIF"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="qS4-kF-4vO"/>
+                    <navigationItem key="navigationItem" title="Horizontal Layout" id="AaD-SQ-gYu"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bMF-CJ-xJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsp-JP-Q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="36.945812807881772"/>
+            <point key="canvasLocation" x="22" y="-599"/>
+        </scene>
+        <!--Vertical Layout-->
+        <scene sceneID="ccn-9j-1sQ">
+            <objects>
+                <collectionViewController id="9P2-Ud-D2M" customClass="BaseCollectionViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="iW9-Tg-dTG" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="t85-Nu-Mt1">
+                            <size key="itemSize" width="150" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="OtA-Vt-ejC" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                <rect key="frame" x="85" y="0.0" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-Uj-Mda" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="fuL-Uj-Mda" firstAttribute="leading" secondItem="OtA-Vt-ejC" secondAttribute="leading" id="KLH-6Z-vhB"/>
+                                    <constraint firstAttribute="trailing" secondItem="fuL-Uj-Mda" secondAttribute="trailing" id="bzB-oG-udJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="fuL-Uj-Mda" secondAttribute="bottom" id="fgE-nQ-BGU"/>
+                                    <constraint firstItem="fuL-Uj-Mda" firstAttribute="top" secondItem="OtA-Vt-ejC" secondAttribute="top" id="t4I-qE-DtN"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellView" destination="fuL-Uj-Mda" id="AN4-RB-ul0"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9P2-Ud-D2M" id="juO-P6-XzS"/>
+                            <outlet property="delegate" destination="9P2-Ud-D2M" id="ns0-fe-DSq"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Vertical Layout" id="2E2-oh-ELb"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvb-qy-gZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="61"/>
         </scene>
     </scenes>
 </document>

@@ -59,6 +59,14 @@ InfiniteCollectionView provide a paging functionality, you can enable it by sett
 
 When the **isItemPagingEnabled** flag is enabled you can adjust the deceleration rate by setting the **velocityMultiplier**, the more the value is high, the more the deceleration is long
 
+### Picker
+
+InfiniteCollectionView provide an **infiniteDelegate** protocol used to get the centered IndexPath, usefull if you want to use an InfiniteCollectionView like a Picker.
+
+```swift
+func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath centeredIndexPath: IndexPath?)
+```
+
 ## Author
 
 Arnoymous, ineox@me.com
