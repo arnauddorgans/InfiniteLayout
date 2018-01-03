@@ -21,8 +21,8 @@ open class InfiniteCollectionView: UICollectionView {
     
     open var centeredIndexPath: IndexPath?
     
-    @IBInspectable var isItemPagingEnabled: Bool = false
-    @IBInspectable var velocityMultiplier: CGFloat = 500 {
+    @IBInspectable open var isItemPagingEnabled: Bool = false
+    @IBInspectable open var velocityMultiplier: CGFloat = 500 {
         didSet {
             self.infiniteLayout.velocityMultiplier = velocityMultiplier
         }
