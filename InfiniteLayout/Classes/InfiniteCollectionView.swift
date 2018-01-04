@@ -112,8 +112,7 @@ open class InfiniteCollectionView: UICollectionView {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        
-        self.loopCollectionViewIfNeeded()
+        self.updateLayoutIfNeeded()
     }
 }
 
@@ -165,21 +164,25 @@ extension InfiniteCollectionView: UICollectionViewDataSource {
 
 extension InfiniteCollectionView: UICollectionViewDelegate {
     
-    // MARK: Loop
-    func loopCollectionViewIfNeeded() {
-        self.infiniteLayout.loopCollectionViewIfNeeded()
-        self.centerCollectionViewIfNeeded()
-    }
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        delegateProxy.delegate?.scrollViewDidScroll?(scrollView)
+    func updateLayoutIfNeeded() {
         self.loopCollectionViewIfNeeded()
+        self.centerCollectionViewIfNeeded()
         
         let preferredVisibleIndexPath = infiniteLayout.preferredVisibleLayoutAttributes()?.indexPath
         if self.centeredIndexPath != preferredVisibleIndexPath {
             self.centeredIndexPath = preferredVisibleIndexPath
             self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: preferredVisibleIndexPath)
         }
+    }
+    
+    // MARK: Loop
+    func loopCollectionViewIfNeeded() {
+        self.infiniteLayout.loopCollectionViewIfNeeded()
+    }
+    
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegateProxy.delegate?.scrollViewDidScroll?(scrollView)
+        self.updateLayoutIfNeeded()
     }
     
     // MARK: Paging

@@ -11,7 +11,7 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
     
     public var velocityMultiplier: CGFloat = 1 // used to simulate paging
     
-    private let multiplier: CGFloat = 100 // contentOffset multiplier
+    private let multiplier: CGFloat = 500 // contentOffset multiplier
     
     private var contentSize: CGSize = .zero
     
@@ -131,6 +131,13 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
     }
     
     // MARK: Loop
+    private func updateContentOffset(_ offset: CGPoint) {
+        guard let collectionView = self.collectionView else {
+            return
+        }
+        collectionView.contentOffset = offset
+        collectionView.layoutIfNeeded()
+    }
     private func preferredContentOffset(forContentOffset contentOffset: CGPoint) -> CGPoint {
         return rect(from: CGRect(origin: contentOffset, size: .zero), page: self.page(from: .zero, offset: multiplier / 2)).origin
     }
@@ -142,8 +149,7 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
         let page = self.pageIndex(from: self.page(for: collectionView.contentOffset))
         let offset = self.preferredContentOffset(forContentOffset: collectionView.contentOffset)
         if (page < 2 || page > self.multiplier - 2) && collectionView.contentOffset != offset {
-            collectionView.contentOffset = offset
-            DispatchQueue.main.async(execute: self.invalidateLayout)
+            self.updateContentOffset(offset)
         }
     }
     
@@ -245,12 +251,11 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
             return
         }
         guard let preferredAttributes = self.preferredVisibleLayoutAttributes(indexPath: indexPath),
-            let offset =  self.centeredContentOffset(forRect: preferredAttributes.frame),
+            let offset = self.centeredContentOffset(forRect: preferredAttributes.frame),
             collectionView.contentOffset != offset else {
                 return
         }
-        collectionView.contentOffset = offset
-        DispatchQueue.main.async(execute: self.invalidateLayout)
+        self.updateContentOffset(offset)
     }
     
     // MARK: Copy
