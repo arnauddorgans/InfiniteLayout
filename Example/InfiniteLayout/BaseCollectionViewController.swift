@@ -22,4 +22,8 @@ class BaseCollectionViewController: InfiniteCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: self.infiniteCollectionView!.infiniteLayout.scrollDirection == .vertical ? .centeredVertically : .centeredHorizontally, animated: true)
+    }
 }

@@ -31,6 +31,13 @@ extension CustomViewController: UICollectionViewDataSource {
     }
 }
 
+extension CustomViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+    }
+}
+
 extension CustomViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

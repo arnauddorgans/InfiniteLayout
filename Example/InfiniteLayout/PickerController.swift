@@ -30,6 +30,13 @@ extension PickerController: UICollectionViewDataSource {
     }
 }
 
+extension PickerController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+}
+
 extension PickerController: InfiniteCollectionViewDelegate {
     
     func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath centeredIndexPath: IndexPath?) {

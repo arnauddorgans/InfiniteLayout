@@ -203,6 +203,9 @@
                                 </cells>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocityMultiplier">
+                                        <real key="value" value="500"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="ctO-Ld-yhL" id="bXu-Jz-K7t"/>
@@ -421,9 +424,6 @@
                         </cells>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="velocityMultiplier">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="CU7-Hg-6kG" id="BOZ-dL-WLG"/>

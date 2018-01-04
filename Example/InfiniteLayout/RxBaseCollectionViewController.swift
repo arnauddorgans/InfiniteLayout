@@ -35,5 +35,11 @@ class RxBaseCollectionViewController: UIViewController {
                 }
                 print("centered: \(current + 1)")
             }).disposed(by: disposeBag)
+        
+        infiniteCollectionView.rx.itemSelected
+            .asDriver()
+            .drive(onNext: { [unowned self] indexPath in
+                self.infiniteCollectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+            }).disposed(by: disposeBag)
     }
 }

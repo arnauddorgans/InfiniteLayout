@@ -143,6 +143,7 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
         let offset = self.preferredContentOffset(forContentOffset: collectionView.contentOffset)
         if (page < 2 || page > self.multiplier - 2) && collectionView.contentOffset != offset {
             collectionView.contentOffset = offset
+            DispatchQueue.main.async(execute: self.invalidateLayout)
         }
     }
     
@@ -249,6 +250,7 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
                 return
         }
         collectionView.contentOffset = offset
+        DispatchQueue.main.async(execute: self.invalidateLayout)
     }
     
     // MARK: Copy
