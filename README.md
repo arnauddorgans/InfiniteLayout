@@ -112,7 +112,7 @@ Observable.just(Array(0..<2))
         cell.update(index: row) // update your cell
     }.disposed(by: disposeBag)
     
-    
+// custom cell dequeue
 Observable.just(Array(0..<2))
     .bind(to: infiniteCollectionView.rx.items(infinite: true)) { collectionView, row, element in
         let indexPath = IndexPath(row: row, section: 0)
