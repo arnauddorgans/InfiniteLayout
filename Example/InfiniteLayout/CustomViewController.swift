@@ -17,11 +17,7 @@ class CustomViewController: UIViewController {
 extension CustomViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 14
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
