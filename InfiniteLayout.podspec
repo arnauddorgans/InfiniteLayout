@@ -44,7 +44,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
   s.default_subspec = 'Core'
 
     s.subspec 'Core' do |sp|
-        s.source_files = 'InfiniteLayout/Classes/**/*'
+        sp.source_files = 'InfiniteLayout/Classes/**/*'
     end
 
     s.subspec 'Rx' do |sp|
