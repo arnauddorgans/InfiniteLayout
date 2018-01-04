@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.2.0.1'
+  s.version          = '0.2.0.2'
   s.summary          = 'Horizontal and Vertical infinite scrolling feature for UICollectionView with Paging, NSProxy delegate, Reactive extension'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Horizontal and Vertical infinite scrolling feature for UICollectionView with Paging, NSProxy delegate, Reactive extension
+Horizontal and Vertical infinite scrolling feature for UICollectionView with Paging, NSProxy delegate, Reactive extension, SectionModel & AnimatableSectionModel support
                        DESC
 
   s.homepage         = 'https://github.com/Arnoymous/InfiniteLayout'
