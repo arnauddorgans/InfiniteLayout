@@ -32,7 +32,9 @@ just use UICollectionViewDataSource and UICollectionViewDelegate in the same way
 InfiniteLayout provides 3 classes for infinite scrolling:
 
 **InfiniteLayout**: an UICollectionViewFlowLayout
+
 **InfiniteCollectionView**: an UICollectionView with InfiniteLayout
+
 **InfiniteCollectionViewController**: an UICollectionViewController with InfiniteCollectionView
 
 ### IndexPath
