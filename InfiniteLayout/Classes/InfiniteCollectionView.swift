@@ -105,7 +105,9 @@ open class InfiniteCollectionView: UICollectionView {
     private func sharedInit() {
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
-        self.scrollsToTop = false
+        #if os(iOS)
+            self.scrollsToTop = false
+        #endif
     }
     
     open override func layoutSubviews() {

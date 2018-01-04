@@ -30,7 +30,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
-
+  
 #s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/InfiniteLayout/BridgeHeader.h' }
   
   # s.resource_bundles = {
@@ -43,15 +43,15 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
 
   s.default_subspec = 'Core'
 
-    s.subspec 'Core' do |sp|
-        sp.source_files = 'InfiniteLayout/Classes/**/*'
+    s.subspec 'Core' do |core|
+        core.source_files = 'InfiniteLayout/Classes/**/*'
     end
 
-    s.subspec 'Rx' do |sp|
-        sp.dependency 'InfiniteLayout/Core', '~> 0.1'
-        sp.dependency 'RxSwift', '~> 4.0'
-        sp.dependency 'RxCocoa', '~> 4.0'
-        sp.dependency 'RxDataSources', '~> 3.0'
-        sp.source_files = 'InfiniteLayout/Rx/**/*'
+    s.subspec 'Rx' do |rx|
+        rx.dependency 'InfiniteLayout/Core', '~> 0.1'
+        rx.dependency 'RxSwift', '~> 4.0'
+        rx.dependency 'RxCocoa', '~> 4.0'
+        rx.dependency 'RxDataSources', '~> 3.0'
+        rx.source_files = 'InfiniteLayout/Rx/**/*'
     end
 end
