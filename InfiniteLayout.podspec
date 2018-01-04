@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.1.7'
+  s.version          = '0.2.0'
   s.summary          = 'Horizontal and Vertical infinite scrolling feature for UICollectionView'
 
 # This description is used to generate tags and improve search results.
@@ -48,7 +48,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
     end
 
     s.subspec 'Rx' do |rx|
-        rx.dependency 'InfiniteLayout/Core', '~> 0.1'
+        rx.dependency 'InfiniteLayout/Core', '~> 0.2'
         rx.dependency 'RxSwift', '~> 4.0'
         rx.dependency 'RxCocoa', '~> 4.0'
         rx.dependency 'RxDataSources', '~> 3.0'
