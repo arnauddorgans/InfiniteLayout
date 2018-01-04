@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yGQ-hH-2v6">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -32,7 +32,7 @@
             <objects>
                 <tableViewController id="pMz-7t-sA5" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YNN-Jo-hL3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -120,6 +120,30 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Rx" id="l6q-RG-uyY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="i8W-08-UPB" style="IBUITableViewCellStyleDefault" id="1E8-fo-BBx">
+                                        <rect key="frame" x="0.0" y="204" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1E8-fo-BBx" id="NMq-kd-IrV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Vertical Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i8W-08-UPB">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LXZ-Bh-cft" kind="show" id="IlB-ib-PBy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="pMz-7t-sA5" id="OC9-mx-dmD"/>
@@ -141,11 +165,11 @@
                         <viewControllerLayoutGuide type="bottom" id="q9H-d0-4cm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C5p-bu-Djh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="enX-ef-ELn" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="ZR7-Jn-ewG" customClass="CustomLayout" customModule="InfiniteLayout_Example" customModuleProvider="target"/>
                                 <cells>
@@ -212,11 +236,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ZuO-bs-QWL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vhd-CK-34X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-5Z-6FI" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
-                                <rect key="frame" x="0.0" y="288" width="320" height="192"/>
+                                <rect key="frame" x="0.0" y="341" width="320" height="227"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="PTo-iT-zZX">
                                     <size key="itemSize" width="200" height="150"/>
@@ -226,7 +250,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7Np-kQ-f93" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="21" width="200" height="150"/>
+                                        <rect key="frame" x="0.0" y="38.5" width="200" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
@@ -255,9 +279,6 @@
                                 </cells>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="velocityMultiplier">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="nUW-3u-2O9" id="vHT-UO-3ny"/>
@@ -266,8 +287,11 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-eR-E9T" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
-                                <rect key="frame" x="53.5" y="66.5" width="213" height="213"/>
+                                <rect key="frame" x="26.5" y="98" width="267" height="213.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n2a-eR-E9T" secondAttribute="height" multiplier="1.25" id="qUW-wU-jQk"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -279,7 +303,6 @@
                             <constraint firstAttribute="trailing" secondItem="Yg1-5Z-6FI" secondAttribute="trailing" id="PSV-WU-ltt"/>
                             <constraint firstItem="Yg1-5Z-6FI" firstAttribute="leading" secondItem="Vhd-CK-34X" secondAttribute="leading" id="UQ7-m3-LKy"/>
                             <constraint firstItem="n2a-eR-E9T" firstAttribute="centerX" secondItem="Vhd-CK-34X" secondAttribute="centerX" id="hN7-qa-9iE"/>
-                            <constraint firstItem="n2a-eR-E9T" firstAttribute="width" secondItem="Vhd-CK-34X" secondAttribute="width" multiplier="2:3" id="k1E-14-EKC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Picker" id="Op4-F3-Cvs"/>
@@ -292,12 +315,77 @@
             </objects>
             <point key="canvasLocation" x="22" y="802"/>
         </scene>
+        <!--Rx-->
+        <scene sceneID="w7X-Gq-cbX">
+            <objects>
+                <viewController id="LXZ-Bh-cft" customClass="RxBaseCollectionViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LXw-fB-orN"/>
+                        <viewControllerLayoutGuide type="bottom" id="QOu-Qv-Lfh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zqI-fb-q5e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ci9-0n-fka" customClass="RxInfiniteCollectionView" customModule="InfiniteLayout">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="mgE-mI-m4m">
+                                    <size key="itemSize" width="200" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="T9n-br-7do" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBQ-Rn-0uJ" customClass="CellView" customModule="InfiniteLayout_Example" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="125"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jBQ-Rn-0uJ" secondAttribute="trailing" id="82l-QQ-iZ6"/>
+                                            <constraint firstItem="jBQ-Rn-0uJ" firstAttribute="top" secondItem="T9n-br-7do" secondAttribute="top" id="qFb-og-mcO"/>
+                                            <constraint firstAttribute="bottom" secondItem="jBQ-Rn-0uJ" secondAttribute="bottom" id="rGV-tl-lnS"/>
+                                            <constraint firstItem="jBQ-Rn-0uJ" firstAttribute="leading" secondItem="T9n-br-7do" secondAttribute="leading" id="ugu-X8-5hQ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellView" destination="jBQ-Rn-0uJ" id="kQb-9f-ey8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ci9-0n-fka" firstAttribute="top" secondItem="zqI-fb-q5e" secondAttribute="top" id="C5M-bI-V1A"/>
+                            <constraint firstItem="ci9-0n-fka" firstAttribute="leading" secondItem="zqI-fb-q5e" secondAttribute="leading" id="ftH-Ue-rBH"/>
+                            <constraint firstItem="ci9-0n-fka" firstAttribute="trailing" secondItem="zqI-fb-q5e" secondAttribute="trailing" id="wy7-Ci-NVK"/>
+                            <constraint firstAttribute="bottom" secondItem="ci9-0n-fka" secondAttribute="bottom" id="yOo-Td-V0c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rx" id="BMY-0d-YCj"/>
+                    <connections>
+                        <outlet property="infiniteCollectionView" destination="ci9-0n-fka" id="fSY-Qh-bhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TkU-4C-L7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="-671"/>
+        </scene>
         <!--Horizontal Layout-->
         <scene sceneID="0Xz-LA-moA">
             <objects>
                 <collectionViewController id="CU7-Hg-6kG" customClass="BaseCollectionViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Iuy-Ov-jLz" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="i7U-Tf-kfd">
@@ -308,7 +396,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="BVQ-cb-bj4" customClass="Cell" customModule="InfiniteLayout_Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="133" width="250" height="150"/>
+                                <rect key="frame" x="0.0" y="177" width="250" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
@@ -346,14 +434,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsp-JP-Q6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="-599"/>
+            <point key="canvasLocation" x="21" y="-670"/>
         </scene>
         <!--Vertical Layout-->
         <scene sceneID="ccn-9j-1sQ">
             <objects>
                 <collectionViewController id="9P2-Ud-D2M" customClass="BaseCollectionViewController" customModule="InfiniteLayout_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="iW9-Tg-dTG" customClass="InfiniteCollectionView" customModule="InfiniteLayout">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="1000" id="t85-Nu-Mt1">
@@ -387,6 +475,9 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="9P2-Ud-D2M" id="juO-P6-XzS"/>
                             <outlet property="delegate" destination="9P2-Ud-D2M" id="ns0-fe-DSq"/>

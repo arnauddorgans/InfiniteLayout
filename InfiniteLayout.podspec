@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'Horizontal and Vertical infinite scrolling feature for UICollectionView'
 
 # This description is used to generate tags and improve search results.
@@ -31,8 +31,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
 
-  s.source_files = 'InfiniteLayout/Classes/**/*'
-#s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/InfiniteLayout/BridgeHeader.h' } 
+#s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/InfiniteLayout/BridgeHeader.h' }
   
   # s.resource_bundles = {
   #   'InfiniteLayout' => ['InfiniteLayout/Assets/*.png']
@@ -41,4 +40,18 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'CocoaProxy', '~> 0.1'
+
+  s.default_subspec = 'Core'
+
+    s.subspec 'Core' do |sp|
+        s.source_files = 'InfiniteLayout/Classes/**/*'
+    end
+
+    s.subspec 'Rx' do |sp|
+        sp.dependency 'InfiniteLayout/Core', '~> 0.1'
+        sp.dependency 'RxSwift', '~> 4.0'
+        sp.dependency 'RxCocoa', '~> 4.0'
+        sp.dependency 'RxDataSources', '~> 3.0'
+        sp.source_files = 'InfiniteLayout/Rx/**/*'
+    end
 end

@@ -17,6 +17,7 @@
 		D403973F1FEBFA9D006C41D2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403973E1FEBFA9D006C41D2 /* Cell.swift */; };
 		D4162A391FF502A900AC2572 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4162A381FF502A900AC2572 /* CustomLayout.swift */; };
 		D43362D11FF64B330040C679 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43362CF1FF64B330040C679 /* BaseCollectionViewController.swift */; };
+		D495544E1FFD3D920081225B /* RxBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495544D1FFD3D920081225B /* RxBaseCollectionViewController.swift */; };
 		D4B9816E1FFCCC900016C676 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9816D1FFCCC900016C676 /* PickerController.swift */; };
 		E997A539C8278E7A661C9F91 /* Pods_InfiniteLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50F79B0DFFDE95D322480B2 /* Pods_InfiniteLayout_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -34,7 +35,7 @@
 /* Begin PBXFileReference section */
 		17E9A86BF3432BF233E3D297 /* Pods-InfiniteLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteLayout_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2E68337E21F08944069DC023 /* Pods-InfiniteLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteLayout_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteLayout_Tests/Pods-InfiniteLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5DA98D9A451E79A872E96E69 /* InfiniteLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = InfiniteLayout.podspec; path = ../InfiniteLayout.podspec; sourceTree = "<group>"; };
+		5DA98D9A451E79A872E96E69 /* InfiniteLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = InfiniteLayout.podspec; path = ../InfiniteLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* InfiniteLayout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		D403973E1FEBFA9D006C41D2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		D4162A381FF502A900AC2572 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		D43362CF1FF64B330040C679 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		D495544D1FFD3D920081225B /* RxBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBaseCollectionViewController.swift; sourceTree = "<group>"; };
 		D4B9816D1FFCCC900016C676 /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
 		EF577FD009F0E2F96F1CECC6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F900DDE615FA1056EB58998B /* Pods-InfiniteLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteLayout_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfiniteLayout_Tests/Pods-InfiniteLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,9 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				D43362D31FF64B9E0040C679 /* Base */,
-				D43362CC1FF64AD30040C679 /* Custom */,
-				D4B9816C1FFCCC5B0016C676 /* Picker */,
+				D4B981781FFD1FEF0016C676 /* Swift */,
+				D4B981791FFD1FF50016C676 /* Rx */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -182,6 +183,24 @@
 				D4B9816D1FFCCC900016C676 /* PickerController.swift */,
 			);
 			name = Picker;
+			sourceTree = "<group>";
+		};
+		D4B981781FFD1FEF0016C676 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D43362D31FF64B9E0040C679 /* Base */,
+				D43362CC1FF64AD30040C679 /* Custom */,
+				D4B9816C1FFCCC5B0016C676 /* Picker */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		D4B981791FFD1FF50016C676 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				D495544D1FFD3D920081225B /* RxBaseCollectionViewController.swift */,
+			);
+			name = Rx;
 			sourceTree = "<group>";
 		};
 		E938139B99B9D91C14707C07 /* Pods */ = {
@@ -325,12 +344,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaProxy/CocoaProxy.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/InfiniteLayout/InfiniteLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaProxy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InfiniteLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -412,6 +439,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				D495544E1FFD3D920081225B /* RxBaseCollectionViewController.swift in Sources */,
 				D4162A391FF502A900AC2572 /* CustomLayout.swift in Sources */,
 				D4B9816E1FFCCC900016C676 /* PickerController.swift in Sources */,
 				D403973F1FEBFA9D006C41D2 /* Cell.swift in Sources */,
