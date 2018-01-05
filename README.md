@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![Platform](https://img.shields.io/cocoapods/p/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 
-<img src="horizontal.gif" width="250" height="540"><img src="vertical.gif" width="250" height="540"><img src="custom.gif" width="250" height="540">
+<img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/horizontal.gif" width="250" height="540">          <img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/vertical.gif" width="250" height="540">          <img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/custom.gif" width="250" height="540">
 
 
 ## Example
@@ -80,7 +80,7 @@ self.infiniteCollectionView.preferredCenteredIndexPath = nil // center the close
 
 ### Delegate
 
-<img src="delegate.gif" width="250" height="540">
+<img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/delegate.gif" width="250" height="540">
 
 InfiniteCollectionView provide an **infiniteDelegate** protocol used to get the centered IndexPath, usefull if you want to use an InfiniteCollectionView like a Picker.
 
