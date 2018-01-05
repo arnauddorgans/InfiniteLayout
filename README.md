@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![Platform](https://img.shields.io/cocoapods/p/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 
-<img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/horizontal.gif" width="250" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/separator.png" width="50" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/vertical.gif" width="250" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/separator.png" width="50" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/custom.gif" width="250" height="540">
+<img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/horizontal.gif" width="250" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/separator.png" width="40" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/vertical.gif" width="250" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/separator.png" width="40" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/custom.gif" width="250" height="540">
 
 
 ## Example
