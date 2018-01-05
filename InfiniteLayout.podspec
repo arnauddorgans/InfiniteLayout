@@ -22,7 +22,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
                        DESC
 
   s.homepage         = 'https://github.com/Arnoymous/InfiniteLayout'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://github.com/Arnoymous/InfiniteLayout/raw/master/horizontal.gif', 'https://github.com/Arnoymous/InfiniteLayout/raw/master/vertical.gif', 'https://github.com/Arnoymous/InfiniteLayout/raw/master/custom.gif', 'https://github.com/Arnoymous/InfiniteLayout/raw/master/delegate.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Arnoymous' => 'ineox@me.com' }
   s.source           = { :git => 'https://github.com/Arnoymous/InfiniteLayout.git', :tag => s.version.to_s }
