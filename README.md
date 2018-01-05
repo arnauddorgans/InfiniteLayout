@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![Platform](https://img.shields.io/cocoapods/p/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 
+<img src="horizontal.gif" width="250" height="540">
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
