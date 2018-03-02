@@ -151,13 +151,13 @@ RxInfiniteCollectionView provide Reactive extension for **itemCentered** & **mod
 ```swift
 infiniteCollectionView.rx.itemCentered
     .asDriver()
-    .drive(onNext: { indexPath in
+    .drive(onNext: { [unowned self] indexPath in
         self.selectedView.update(index: indexPath.row) // update interface with indexPath
     }).disposed(by: disposeBag)
 
 infiniteCollectionView.rx.modelCentered(Int.self)
     .asDriver()
-    .drive(onNext: { element in
+    .drive(onNext: { [unowned self] element in
         self.selectedView.update(index: element) // update interface with model
     }).disposed(by: disposeBag)
 ```
