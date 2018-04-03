@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.2.3'
+  s.version          = '0.2.3.1'
   s.summary          = 'Horizontal and Vertical infinite scrolling feature for UICollectionView with Paging, NSProxy delegate, Reactive extension'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 Horizontal and Vertical infinite scrolling feature for UICollectionView with Paging, NSProxy delegate, Reactive extension, SectionModel & AnimatableSectionModel support
                        DESC
 
-  s.homepage         = 'https://github.com/Arnoymous/InfiniteLayout'
-  s.screenshots     = 'https://github.com/Arnoymous/InfiniteLayout/raw/master/horizontal.gif', 'https://github.com/Arnoymous/InfiniteLayout/raw/master/vertical.gif', 'https://github.com/Arnoymous/InfiniteLayout/raw/master/custom.gif', 'https://github.com/Arnoymous/InfiniteLayout/raw/master/delegate.gif'
+  s.homepage         = 'https://github.com/arnauddorgans/InfiniteLayout'
+  s.screenshots     = 'https://github.com/arnauddorgans/InfiniteLayout/raw/master/horizontal.gif', 'https://github.com/arnauddorgans/InfiniteLayout/raw/master/vertical.gif', 'https://github.com/arnauddorgans/InfiniteLayout/raw/master/custom.gif', 'https://github.com/arnauddorgans/InfiniteLayout/raw/master/delegate.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Arnoymous' => 'ineox@me.com' }
-  s.source           = { :git => 'https://github.com/Arnoymous/InfiniteLayout.git', :tag => s.version.to_s }
+  s.author           = { 'Arnaud Dorgans' => 'ineox@me.com' }
+  s.source           = { :git => 'https://github.com/arnauddorgans/InfiniteLayout.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/arnauddorgans'
 
   s.ios.deployment_target = '8.0'
@@ -39,7 +39,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'CocoaProxy', '~> 0.1'
+  s.dependency 'CocoaProxy', '~> 0'
 
   s.default_subspec = 'Core'
 
@@ -48,10 +48,10 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
     end
 
     s.subspec 'Rx' do |rx|
-        rx.dependency 'InfiniteLayout/Core', '~> 0.2'
-        rx.dependency 'RxSwift', '~> 4.0'
-        rx.dependency 'RxCocoa', '~> 4.0'
-        rx.dependency 'RxDataSources', '~> 3.0'
+        rx.dependency 'InfiniteLayout/Core', '~> 0'
+        rx.dependency 'RxSwift', '~> 4'
+        rx.dependency 'RxCocoa', '~> 4'
+        rx.dependency 'RxDataSources', '~> 3'
         rx.source_files = 'InfiniteLayout/Rx/**/*'
     end
 end

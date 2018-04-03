@@ -1,11 +1,11 @@
 # InfiniteLayout
 
-[![CI Status](http://img.shields.io/travis/Arnoymous/InfiniteLayout.svg?style=flat)](https://travis-ci.org/Arnoymous/InfiniteLayout)
+[![CI Status](http://img.shields.io/travis/arnauddorgans/InfiniteLayout.svg?style=flat)](https://travis-ci.org/arnauddorgans/InfiniteLayout)
 [![Version](https://img.shields.io/cocoapods/v/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![License](https://img.shields.io/cocoapods/l/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![Platform](https://img.shields.io/cocoapods/p/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 
-<img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/horizontal.gif" width="250" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/vertical.gif" width="250" height="540"><img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/custom.gif" width="250" height="540">
+<img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/horizontal.gif" width="250" height="540"><img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/vertical.gif" width="250" height="540"><img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/custom.gif" width="250" height="540">
 
 
 ## Example
@@ -80,7 +80,7 @@ self.infiniteCollectionView.preferredCenteredIndexPath = nil // center the close
 
 ### Delegate
 
-<img src="https://github.com/Arnoymous/InfiniteLayout/raw/master/delegate.gif" width="250" height="540">
+<img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/delegate.gif" width="250" height="540">
 
 InfiniteCollectionView provide an **infiniteDelegate** protocol used to get the centered IndexPath, usefull if you want to use an InfiniteCollectionView like a Picker.
 
@@ -164,7 +164,7 @@ infiniteCollectionView.rx.modelCentered(Int.self)
 
 ## Author
 
-Arnoymous, arnaud.dorgans@gmail.com
+Arnaud Dorgans, arnaud.dorgans@gmail.com
 
 ## License
 
