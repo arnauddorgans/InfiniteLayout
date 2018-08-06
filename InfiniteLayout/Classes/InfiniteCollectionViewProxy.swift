@@ -45,6 +45,10 @@ class InfiniteCollectionViewProxy<T: NSObjectProtocol>: CocoaProxy {
         super.init(proxies: [])
         self.collectionView = collectionView
     }
+    
+    deinit {
+        self.proxies.removeAll()
+    }
 }
 
 class InfiniteCollectionViewDelegateProxy: InfiniteCollectionViewProxy<UICollectionViewDelegate>, UICollectionViewDelegate {

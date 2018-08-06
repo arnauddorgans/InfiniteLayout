@@ -17,7 +17,7 @@ open class InfiniteCollectionView: UICollectionView {
     lazy var dataSourceProxy = InfiniteCollectionViewDataSourceProxy(collectionView: self)
     lazy var delegateProxy = InfiniteCollectionViewDelegateProxy(collectionView: self)
     
-    @IBOutlet open var infiniteDelegate: InfiniteCollectionViewDelegate?
+    @IBOutlet open weak var infiniteDelegate: InfiniteCollectionViewDelegate?
     
     open private(set) var centeredIndexPath: IndexPath?
     open var preferredCenteredIndexPath: IndexPath? = IndexPath(item: 0, section: 0)
@@ -25,7 +25,7 @@ open class InfiniteCollectionView: UICollectionView {
     var forwardDelegate: Bool { return true }
     var _contentSize: CGSize?
     
-    override open var delegate: UICollectionViewDelegate? {
+    override open weak var delegate: UICollectionViewDelegate? {
         get { return super.delegate }
         set {
             guard forwardDelegate else {
@@ -45,7 +45,7 @@ open class InfiniteCollectionView: UICollectionView {
         }
     }
     
-    override open var dataSource: UICollectionViewDataSource? {
+    override open weak var dataSource: UICollectionViewDataSource? {
         get { return super.dataSource }
         set {
             guard forwardDelegate else {
