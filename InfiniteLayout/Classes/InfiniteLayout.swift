@@ -16,6 +16,13 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
     private var contentSize: CGSize = .zero
     
     private (set) var isEnabled: Bool = false
+    
+    public var currentPage: CGPoint {
+        guard let collectionView = self.collectionView else {
+            return .zero
+        }
+        return self.page(for: collectionView.contentOffset)
+    }
         
     open override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
@@ -58,6 +65,13 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
         }
         return CGSize(width: scrollDirection == .horizontal ? self.contentSize.width * multiplier : self.contentSize.width,
                       height: scrollDirection == .vertical ? self.contentSize.height * multiplier : self.contentSize.height)
+    }
+    
+    open override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        guard let attributes = super.layoutAttributesForItem(at: indexPath) else {
+            return nil
+        }
+        return self.layoutAttributes(from: attributes, page: currentPage)
     }
     
     override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
