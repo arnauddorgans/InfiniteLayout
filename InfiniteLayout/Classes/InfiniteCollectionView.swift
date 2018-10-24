@@ -134,7 +134,7 @@ extension InfiniteCollectionView: UICollectionViewDataSource {
     }
     
     private var multiplier: Int {
-        return InfiniteDataSources.multiplier(estimatedItemSize: self.infiniteLayout.itemSize)
+        return InfiniteDataSources.multiplier(estimatedItemSize: self.infiniteLayout.itemSize, enabled: self.infiniteLayout.isEnabled)
     }
     
     public func section(from infiniteSection: Int) -> Int {

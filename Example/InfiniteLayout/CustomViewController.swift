@@ -12,6 +12,7 @@ import InfiniteLayout
 class CustomViewController: UIViewController {
     
     @IBOutlet weak var infiniteCollectionView: InfiniteCollectionView!
+    
 }
 
 extension CustomViewController: UICollectionViewDataSource {

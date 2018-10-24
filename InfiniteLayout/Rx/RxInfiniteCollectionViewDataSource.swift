@@ -9,6 +9,8 @@ import UIKit
 import RxDataSources
 
 open class RxInfiniteCollectionViewSectionedReloadDataSource<S: SectionModelType>: RxCollectionViewSectionedReloadDataSource<S> {
+    
+    public var isEnabled: Bool = true
 
     open override subscript(section: Int) -> S {
         let section = InfiniteDataSources.section(from: section, numberOfSections: sectionModels.count)
@@ -33,7 +35,7 @@ open class RxInfiniteCollectionViewSectionedReloadDataSource<S: SectionModelType
         guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             fatalError()
         }
-        return InfiniteDataSources.multiplier(estimatedItemSize: layout.itemSize)
+        return InfiniteDataSources.multiplier(estimatedItemSize: layout.itemSize, enabled: isEnabled)
     }
     
     open override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -54,6 +56,8 @@ open class RxInfiniteCollectionViewSectionedReloadDataSource<S: SectionModelType
 
 open class RxInfiniteCollectionViewSectionedAnimatedDataSource<S: AnimatableSectionModelType>: RxCollectionViewSectionedAnimatedDataSource<S> {
     
+    public var isEnabled: Bool = true
+    
     open override subscript(section: Int) -> S {
         let section = InfiniteDataSources.section(from: section, numberOfSections: sectionModels.count)
         return self.sectionModels[section]
@@ -77,7 +81,7 @@ open class RxInfiniteCollectionViewSectionedAnimatedDataSource<S: AnimatableSect
         guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             fatalError()
         }
-        return InfiniteDataSources.multiplier(estimatedItemSize: layout.itemSize)
+        return InfiniteDataSources.multiplier(estimatedItemSize: layout.itemSize, enabled: isEnabled)
     }
     
     open override func numberOfSections(in collectionView: UICollectionView) -> Int {

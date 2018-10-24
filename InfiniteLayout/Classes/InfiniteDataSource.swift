@@ -17,7 +17,10 @@ class InfiniteDataSources {
         return IndexPath(item: infiniteIndexPath.item % numberOfItems, section: self.section(from: infiniteIndexPath.section, numberOfSections: numberOfSections))
     }
     
-    static func multiplier(estimatedItemSize: CGSize) -> Int {
+    static func multiplier(estimatedItemSize: CGSize, enabled: Bool) -> Int {
+        guard enabled else {
+            return 1
+        }
         let min = Swift.min(estimatedItemSize.width, estimatedItemSize.height)
         let count = ceil(InfiniteLayout.minimumContentSize / min)
         return Int(count)

@@ -1,12 +1,12 @@
 PODS:
   - CocoaProxy (0.1.1)
   - Differentiator (3.0.2)
-  - InfiniteLayout (0.2.3.1):
+  - InfiniteLayout (0.2.3.4):
     - CocoaProxy (~> 0)
-    - InfiniteLayout/Core (= 0.2.3.1)
-  - InfiniteLayout/Core (0.2.3.1):
+    - InfiniteLayout/Core (= 0.2.3.4)
+  - InfiniteLayout/Core (0.2.3.4):
     - CocoaProxy (~> 0)
-  - InfiniteLayout/Rx (0.2.3.1):
+  - InfiniteLayout/Rx (0.2.3.4):
     - CocoaProxy (~> 0)
     - InfiniteLayout/Core (~> 0)
     - RxCocoa (~> 4)
@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaProxy: 35ab81e24325b33834cffe45a3d1fd48ca67ef3a
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
-  InfiniteLayout: 17bbab705aa4d941fa82a7e9b658c96d13ce91a3
+  InfiniteLayout: 01f4d7bda9e2c5be476f10c670a02460e8568964
   RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0

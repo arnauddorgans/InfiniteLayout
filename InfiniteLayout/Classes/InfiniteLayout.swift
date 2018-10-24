@@ -67,7 +67,7 @@ open class InfiniteLayout: UICollectionViewFlowLayout {
     
     override open var collectionViewContentSize: CGSize {
         guard hasValidLayout else {
-            return super.collectionViewContentSize
+            return self.contentSize
         }
         return CGSize(width: scrollDirection == .horizontal ? self.contentSize.width * multiplier : self.contentSize.width,
                       height: scrollDirection == .vertical ? self.contentSize.height * multiplier : self.contentSize.height)
