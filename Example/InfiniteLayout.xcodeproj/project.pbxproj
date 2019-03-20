@@ -324,7 +324,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaProxy/CocoaProxy.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/InfiniteLayout/InfiniteLayout.framework",
@@ -343,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InfiniteLayout_Example/Pods-InfiniteLayout_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB5E5FB53E7C451064DBC9A2 /* [CP] Check Pods Manifest.lock */ = {

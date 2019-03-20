@@ -202,5 +202,6 @@ extension InfiniteCollectionView: UICollectionViewDelegate {
         if isItemPagingEnabled {
             self.infiniteLayout.centerCollectionView(withVelocity: velocity, targetContentOffset: targetContentOffset)
         }
+        self.delegateProxy.delegate?.scrollViewWillEndDragging?(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
 }
