@@ -9,4 +9,5 @@ before_install:
 - pod repo update
 - pod install --project-directory=Example
 script:
+- set -o pipefail && xcodebuild -workspace Example/InfiniteLayout.xcworkspace -scheme InfiniteLayout-Example -sdk iphonesimulator build CODE_SIGNING_REQUIRED=NO | xcpretty -c
 - pod lib lint
