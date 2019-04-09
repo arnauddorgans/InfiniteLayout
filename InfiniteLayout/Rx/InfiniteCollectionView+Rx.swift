@@ -31,7 +31,7 @@ class RxInfiniteCollectionViewDelegate: DelegateProxy<InfiniteCollectionView, In
     }
 }
 
-public extension Reactive where Base: InfiniteCollectionView {
+extension Reactive where Base: InfiniteCollectionView {
     
     private var infiniteDelegate: RxInfiniteCollectionViewDelegate {
         return RxInfiniteCollectionViewDelegate.proxy(for: self.base)
@@ -52,7 +52,7 @@ public extension Reactive where Base: InfiniteCollectionView {
     }
 }
 
-public extension Reactive where Base: RxInfiniteCollectionView {
+extension Reactive where Base: RxInfiniteCollectionView {
 
     public func items<S: Sequence, O: ObservableType>
         (infinite: Bool)

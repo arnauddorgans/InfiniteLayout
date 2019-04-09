@@ -31,7 +31,7 @@ enum CellStyle {
     let colors = [#colorLiteral(red: 0.5254901961, green: 0.6901960784, blue: 0.9137254902, alpha: 1), #colorLiteral(red: 0.5254901961, green: 0.6196078431, blue: 0.9137254902, alpha: 1), #colorLiteral(red: 0.6078431373, green: 0.5254901961, blue: 0.9137254902, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.5254901961, blue: 0.8392156863, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.5254901961, blue: 0.6, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.6784313725, blue: 0.5254901961, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.9058823529, blue: 0.5254901961, alpha: 1), #colorLiteral(red: 0.5254901961, green: 0.9137254902, blue: 0.5921568627, alpha: 1), #colorLiteral(red: 0.5254901961, green: 0.8, blue: 0.9137254902, alpha: 1)]
     
     @IBInspectable var styleIndex: Int {
-        get { return CellStyle.all.index(of: style)! }
+        get { return CellStyle.all.firstIndex(of: style)! }
         set { style = CellStyle.all[newValue % CellStyle.all.count] }
     }
     
