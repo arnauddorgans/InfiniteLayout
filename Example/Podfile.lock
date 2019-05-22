@@ -1,24 +1,27 @@
 PODS:
   - CocoaProxy (0.1.1)
-  - Differentiator (3.1.0)
-  - InfiniteLayout (0.3):
+  - Differentiator (4.0.1)
+  - InfiniteLayout (0.4.1):
     - CocoaProxy (~> 0)
-    - InfiniteLayout/Core (= 0.3)
-  - InfiniteLayout/Core (0.3):
+    - InfiniteLayout/Core (= 0.4.1)
+  - InfiniteLayout/Core (0.4.1):
     - CocoaProxy (~> 0)
-  - InfiniteLayout/Rx (0.3):
+  - InfiniteLayout/Rx (0.4.1):
     - CocoaProxy (~> 0)
     - InfiniteLayout/Core (~> 0)
-    - RxCocoa (~> 4)
-    - RxDataSources (~> 3)
-    - RxSwift (~> 4)
-  - RxCocoa (4.5.0):
-    - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.5.0)
+    - RxCocoa (~> 5)
+    - RxDataSources (~> 4)
+    - RxSwift (~> 5)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
 
 DEPENDENCIES:
   - InfiniteLayout (from `../`)
@@ -30,6 +33,7 @@ SPEC REPOS:
     - Differentiator
     - RxCocoa
     - RxDataSources
+    - RxRelay
     - RxSwift
 
 EXTERNAL SOURCES:
@@ -38,11 +42,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaProxy: 35ab81e24325b33834cffe45a3d1fd48ca67ef3a
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  InfiniteLayout: 24d5e5ea1528bb86ee00a4e3c02f93fdb38e3f68
-  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  InfiniteLayout: 458eadbcb94afc3d777141990fbfe7a804a35609
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
 PODFILE CHECKSUM: 0dc7a9b37f9b7c5d5266beaab9e94861b80aa80f
 

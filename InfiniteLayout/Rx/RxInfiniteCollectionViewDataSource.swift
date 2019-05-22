@@ -17,7 +17,7 @@ open class RxInfiniteCollectionViewSectionedReloadDataSource<S: SectionModelType
         return self.sectionModels[section]
     }
     
-    open override subscript(indexPath: IndexPath) -> I {
+    open override subscript(indexPath: IndexPath) -> Item {
         get {
             let indexPath = InfiniteDataSources.indexPath(from: indexPath,
                                                           numberOfSections: sectionModels.count,
@@ -63,7 +63,7 @@ open class RxInfiniteCollectionViewSectionedAnimatedDataSource<S: AnimatableSect
         return self.sectionModels[section]
     }
     
-    open override subscript(indexPath: IndexPath) -> I {
+    open override subscript(indexPath: IndexPath) -> Item {
         get {
             let indexPath = InfiniteDataSources.indexPath(from: indexPath,
                                                           numberOfSections: sectionModels.count,
