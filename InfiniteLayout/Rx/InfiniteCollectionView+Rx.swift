@@ -58,7 +58,7 @@ extension Reactive where Base: RxInfiniteCollectionView {
         (infinite: Bool)
         -> (_ source: O)
         -> (_ cellFactory: @escaping (UICollectionView, Int, S.Iterator.Element) -> UICollectionViewCell)
-        -> Disposable where O.E == S {
+        -> Disposable where O.Element == S {
             return { source in
                 guard infinite else {
                     return self.items(source)
@@ -76,7 +76,7 @@ extension Reactive where Base: RxInfiniteCollectionView {
         (cellIdentifier: String, cellType: Cell.Type = Cell.self, infinite: Bool)
         -> (_ source: O)
         -> (_ configureCell: @escaping (Int, S.Iterator.Element, Cell) -> Void)
-        -> Disposable where O.E == S {
+        -> Disposable where O.Element == S {
             guard infinite else {
                 return self.items(cellIdentifier: cellIdentifier, cellType: cellType)
             }
