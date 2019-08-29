@@ -8,6 +8,8 @@
 import UIKit
 
 @objc public protocol InfiniteCollectionViewDelegate {
+
+    @objc optional func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, willChangeCenteredIndexPath centeredIndexPath: IndexPath?)
     
     @objc optional func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath centeredIndexPath: IndexPath?)
 }
@@ -170,8 +172,9 @@ extension InfiniteCollectionView: UICollectionViewDelegate {
         
         let preferredVisibleIndexPath = infiniteLayout.preferredVisibleLayoutAttributes()?.indexPath
         if self.centeredIndexPath != preferredVisibleIndexPath {
+            self.infiniteDelegate?.infiniteCollectionView?(self, willChangeCenteredIndexPath: self.centeredIndexPath)
             self.centeredIndexPath = preferredVisibleIndexPath
-            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: preferredVisibleIndexPath)
+            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: self.centeredIndexPath)
         }
     }
     
