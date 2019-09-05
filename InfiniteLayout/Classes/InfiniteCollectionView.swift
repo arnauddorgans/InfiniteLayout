@@ -170,9 +170,9 @@ extension InfiniteCollectionView: UICollectionViewDelegate {
         
         let preferredVisibleIndexPath = infiniteLayout.preferredVisibleLayoutAttributes()?.indexPath
         if self.centeredIndexPath != preferredVisibleIndexPath {
-            let previousCeneteredIndexPath = self.centeredIndexPath
+            let previousCenteredIndexPath = self.centeredIndexPath
             self.centeredIndexPath = preferredVisibleIndexPath
-            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: previousCeneteredIndexPath, to: self.centeredIndexPath)
+            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: previousCenteredIndexPath, to: self.centeredIndexPath)
         }
     }
     
