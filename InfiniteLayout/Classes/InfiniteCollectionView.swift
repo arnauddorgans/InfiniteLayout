@@ -9,9 +9,7 @@ import UIKit
 
 @objc public protocol InfiniteCollectionViewDelegate {
 
-    @objc optional func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, willChangeCenteredIndexPath centeredIndexPath: IndexPath?)
-    
-    @objc optional func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath centeredIndexPath: IndexPath?)
+    @objc optional func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath from: IndexPath?, to: IndexPath?)
 }
 
 open class InfiniteCollectionView: UICollectionView {
@@ -172,9 +170,9 @@ extension InfiniteCollectionView: UICollectionViewDelegate {
         
         let preferredVisibleIndexPath = infiniteLayout.preferredVisibleLayoutAttributes()?.indexPath
         if self.centeredIndexPath != preferredVisibleIndexPath {
-            self.infiniteDelegate?.infiniteCollectionView?(self, willChangeCenteredIndexPath: self.centeredIndexPath)
+            let previousCeneteredIndexPath = self.centeredIndexPath
             self.centeredIndexPath = preferredVisibleIndexPath
-            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: self.centeredIndexPath)
+            self.infiniteDelegate?.infiniteCollectionView?(self, didChangeCenteredIndexPath: previousCeneteredIndexPath, to: self.centeredIndexPath)
         }
     }
     
