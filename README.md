@@ -1,9 +1,10 @@
 # InfiniteLayout
 
 [![CI Status](http://img.shields.io/travis/arnauddorgans/InfiniteLayout.svg?style=flat)](https://travis-ci.org/arnauddorgans/InfiniteLayout)
-[![Version](https://img.shields.io/cocoapods/v/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![License](https://img.shields.io/cocoapods/l/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
 [![Platform](https://img.shields.io/cocoapods/p/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
+[![Version](https://img.shields.io/cocoapods/v/InfiniteLayout.svg?style=flat)](http://cocoapods.org/pods/InfiniteLayout)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 <img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/horizontal.gif" width="250" height="540"><img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/vertical.gif" width="250" height="540"><img src="https://github.com/arnauddorgans/InfiniteLayout/raw/master/custom.gif" width="250" height="540">
 
@@ -12,15 +13,36 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
+
+### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
 InfiniteLayout is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'InfiniteLayout'
+```
+
+
+### [Swift Package Manager](https://github.com/apple/swift-package-manager)
+
+Create a `Package.swift` file.
+
+```swift
+// swift-tools-version:5.0
+
+import PackageDescription
+
+let package = Package(
+  name: "InfiniteLayoutTestProject",
+  dependencies: [
+    .package(url: "https://github.com/arnauddorgans/InfiniteLayout.git", from: "0.4.2")
+  ],
+  targets: [
+    .target(name: "InfiniteLayoutTestProject", dependencies: ["InfiniteLayout"])
+  ]
+)
 ```
 
 ## Usage
