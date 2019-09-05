@@ -85,7 +85,7 @@ self.infiniteCollectionView.preferredCenteredIndexPath = nil // center the close
 InfiniteCollectionView provide an **infiniteDelegate** protocol used to get the centered IndexPath, usefull if you want to use an InfiniteCollectionView like a Picker.
 
 ```swift
-func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath centeredIndexPath: IndexPath?)
+func infiniteCollectionView(_ infiniteCollectionView: InfiniteCollectionView, didChangeCenteredIndexPath from: IndexPath?, to: IndexPath?)
 ```
 
 ### Rx
