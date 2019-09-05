@@ -38,7 +38,7 @@ extension Reactive where Base: InfiniteCollectionView {
     }
     
     public var itemCentered: ControlEvent<IndexPath?> {
-        let source = infiniteDelegate.sentMessage(#selector(InfiniteCollectionViewDelegate.infiniteCollectionView(_:didChangeCenteredIndexPath:)))
+        let source = infiniteDelegate.sentMessage(#selector(InfiniteCollectionViewDelegate.infiniteCollectionView(_:didChangeCenteredIndexPath:to:)))
             .map { $0.last as? IndexPath }
         return ControlEvent(events: source)
     }
