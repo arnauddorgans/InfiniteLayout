@@ -5,6 +5,8 @@
 //  Created by Arnaud Dorgans on 03/01/2018.
 //
 
+#if canImport(RxDataSources)
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -92,3 +94,4 @@ extension Reactive where Base: RxInfiniteCollectionView {
             }
     }
 }
+#endif

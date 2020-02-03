@@ -5,6 +5,8 @@
 //  Created by Arnaud Dorgans on 03/01/2018.
 //
 
+#if canImport(RxSwift)
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -38,3 +40,5 @@ open class RxInfiniteCollectionView: InfiniteCollectionView {
             .disposed(by: disposeBag)
     }
 }
+
+#endif

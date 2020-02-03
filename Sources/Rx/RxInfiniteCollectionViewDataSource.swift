@@ -5,6 +5,8 @@
 //  Created by Arnaud Dorgans on 03/01/2018.
 //
 
+#if canImport(RxDataSources)
+
 import UIKit
 import RxDataSources
 
@@ -99,3 +101,5 @@ open class RxInfiniteCollectionViewSectionedAnimatedDataSource<S: AnimatableSect
         return configureCell(self, collectionView, indexPath, self[indexPath])
     }
 }
+
+#endif
