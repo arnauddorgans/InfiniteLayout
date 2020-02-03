@@ -5,6 +5,10 @@
 //  Created by Arnaud Dorgans on 03/01/2018.
 //
 
+#if canImport(InfiniteLayout)
+import InfiniteLayout
+#endif
+
 import UIKit
 import RxSwift
 import RxCocoa
