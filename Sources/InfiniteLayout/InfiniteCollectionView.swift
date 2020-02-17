@@ -22,7 +22,7 @@ open class InfiniteCollectionView: UICollectionView {
     open private(set) var centeredIndexPath: IndexPath?
     open var preferredCenteredIndexPath: IndexPath? = IndexPath(item: 0, section: 0)
     
-    var forwardDelegate: Bool { return true }
+    open var forwardDelegate: Bool { return true }
     var _contentSize: CGSize?
     
     override open weak var delegate: UICollectionViewDelegate? {
