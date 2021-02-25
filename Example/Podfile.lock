@@ -1,35 +1,32 @@
 PODS:
-  - CocoaProxy (0.1.1)
-  - Differentiator (4.0.1)
-  - InfiniteLayout (0.4.1):
-    - CocoaProxy (~> 0)
-    - InfiniteLayout/Core (= 0.4.1)
-  - InfiniteLayout/Core (0.4.1):
-    - CocoaProxy (~> 0)
-  - InfiniteLayout/Rx (0.4.1):
-    - CocoaProxy (~> 0)
-    - InfiniteLayout/Core (~> 0)
-    - RxCocoa (~> 5)
-    - RxDataSources (~> 4)
-    - RxSwift (~> 5)
-  - RxCocoa (5.0.0):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.0.0):
-    - RxSwift (~> 5)
-  - RxSwift (5.0.0)
+  - Differentiator (5.0.0)
+  - InfiniteLayout (0.4.3):
+    - InfiniteLayout/Core (= 0.4.3)
+  - InfiniteLayout/CocoaProxy (0.4.3)
+  - InfiniteLayout/Core (0.4.3):
+    - InfiniteLayout/CocoaProxy
+  - InfiniteLayout/Rx (0.4.3):
+    - InfiniteLayout/Core
+    - RxCocoa (~> 6)
+    - RxDataSources (~> 5)
+    - RxSwift (~> 6)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
 
 DEPENDENCIES:
   - InfiniteLayout (from `../`)
   - InfiniteLayout/Rx (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - CocoaProxy
+  https://github.com/CocoaPods/Specs.git:
     - Differentiator
     - RxCocoa
     - RxDataSources
@@ -41,14 +38,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaProxy: 35ab81e24325b33834cffe45a3d1fd48ca67ef3a
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  InfiniteLayout: 458eadbcb94afc3d777141990fbfe7a804a35609
-  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  InfiniteLayout: 303a49d6b715d3a427c49aa8a6a1b2a53eaef87b
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
 
-PODFILE CHECKSUM: 0dc7a9b37f9b7c5d5266beaab9e94861b80aa80f
+PODFILE CHECKSUM: 1548a5c219657116d1b43dd844ae5656ecf2b12c
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.10.1
