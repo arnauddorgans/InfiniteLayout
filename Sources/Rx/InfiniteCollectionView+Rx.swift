@@ -46,12 +46,30 @@ extension Reactive where Base: InfiniteCollectionView {
             .map { $0.last as? IndexPath }
         return ControlEvent(events: source)
     }
-    
-    public func modelCentered<T>(_ type: T.Type) -> ControlEvent<T?> {
-        let source = itemCentered
-            .map { indexPath -> T? in
-                return try indexPath.flatMap { try self.model(at: $0) }
+
+    public func modelCentered<T>(_ type: T.Type) -> ControlEvent<T> {
+        let source: Observable<T> = itemCentered.flatMap { [weak view = self.base as InfiniteCollectionView] indexPath -> Observable<T> in
+            guard let view = view, var indexPath = indexPath else {
+                return Observable.empty()
             }
+
+            indexPath.row %= InfiniteDataSources.originCount
+            return Observable.just(try view.rx.model(at: indexPath))
+        }
+        return ControlEvent(events: source)
+    }
+
+    public func modelSelected<T>(_ modelType: T.Type) -> ControlEvent<T> {
+        let source: Observable<T> = itemSelected.flatMap { [weak view = self.base as InfiniteCollectionView] indexPath -> Observable<T> in
+            guard let view = view else {
+                return Observable.empty()
+            }
+
+            var indexPath = indexPath
+            indexPath.row %= InfiniteDataSources.originCount
+            return Observable.just(try view.rx.model(at: indexPath))
+        }
+
         return ControlEvent(events: source)
     }
 }
