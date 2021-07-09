@@ -29,10 +29,6 @@ class RxBaseCollectionViewController: UIViewController {
         infiniteCollectionView.rx.modelCentered(Int.self)
             .asDriver()
             .drive(onNext: { current in
-                guard let current = current else {
-                    print("centered: none")
-                    return
-                }
                 print("centered: \(current + 1)")
             }).disposed(by: disposeBag)
         
