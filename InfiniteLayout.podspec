@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InfiniteLayout'
-  s.version          = '0.4.2'
+  s.version          = '0.5'
   s.summary          = 'Horizontal and Vertical infinite scrolling feature for UICollectionView with Paging, NSProxy delegate, Reactive extension'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
   s.source           = { :git => 'https://github.com/arnauddorgans/InfiniteLayout.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/arnauddorgans'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
   
 #s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/InfiniteLayout/BridgeHeader.h' }
@@ -53,9 +53,9 @@ Horizontal and Vertical infinite scrolling feature for UICollectionView with Pag
     end
     s.subspec 'Rx' do |rx|
         rx.dependency 'InfiniteLayout/Core'
-        rx.dependency 'RxSwift', '~> 5'
-        rx.dependency 'RxCocoa', '~> 5'
-        rx.dependency 'RxDataSources', '~> 4'
+        rx.dependency 'RxSwift', '~> 6'
+        rx.dependency 'RxCocoa', '~> 6'
+        rx.dependency 'RxDataSources', '~> 5'
         rx.source_files = 'Sources/Rx/**/*'
     end
 end
