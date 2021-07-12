@@ -20,6 +20,24 @@ open class InfiniteCollectionView: UICollectionView {
     @IBOutlet open weak var infiniteDelegate: InfiniteCollectionViewDelegate?
     
     open private(set) var centeredIndexPath: IndexPath?
+    open private(set) var nextIndexPath: IndexPath? {
+        get {
+            guard let center = centeredIndexPath else { return nil }
+            let section = center.section
+            let row = center.row > numberOfItems(inSection: section) - 2 ? 0 : center.row + 1
+            return .init(row: row, section: section)
+        }
+        set { }
+    }
+    open private(set) var prevIndexPath: IndexPath? {
+        get {
+            guard let center = centeredIndexPath else { return nil }
+            let section = center.section
+            let row = center.row - 1 < 0 ? numberOfItems(inSection: section) - 1 : center.row - 1
+            return .init(row: row, section: section)
+        }
+        set { }
+    }
     open var preferredCenteredIndexPath: IndexPath? = IndexPath(item: 0, section: 0)
     
     open var forwardDelegate: Bool { return true }
